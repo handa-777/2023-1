@@ -1,0 +1,10 @@
+2-5
+
+A -> name 입력, major 입력
+name의 길이가 7보다 크면 major 입력 스킵
+major의 길이가 7보다 크면 Invalid choice
+
+U -> ID 입력, 새로운 major 입력
+major의 길이가 7보다 크면 invalid choice
+ID에 문자 입력하면 invalid choice
+ID에 존재하지 않는 ID(정수) 입력하면 invaild ID

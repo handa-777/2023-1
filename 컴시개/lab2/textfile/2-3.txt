@@ -1,0 +1,19 @@
+2-3
+두 정수 a,b 입력 받는 프로그램
+rax = b, edx = a인듯?
+
+정수면 배열에 저장하고 종료
+정수가 아닌 다른 자료형이면 invalid 출력하고 종료
+
+a가 정수, b가 소수일 때는 invalid X 
+but 너무 큰 소수는 SIGSEGV(더 클 때) or SIGBUS(더 작을 때)
+-> rsp + rax*4
+a가 소수, b가 정수일 때는 invalid
+문자는 상관없이 모두 invalid
+
+0x004005b0가 rsp+0x88, rdx = value 2번째 정수
+0x00000000가 rsp+0x8c, rax = index 1번째 정수
+-> 첫번째 정수가 array의 인덱스, 두번째 정수가 그 인덱스에 저장될 값
+
+정답: 38 4196006
+

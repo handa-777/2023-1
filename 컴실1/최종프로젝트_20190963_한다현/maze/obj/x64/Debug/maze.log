@@ -1,0 +1,26 @@
+﻿  ofApp.cpp
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+C:\Users\handa\Desktop\oF_root\libs\openFrameworks\utils\ofUtils.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\handa\Desktop\oF_root\libs\openFrameworks\math\ofVec3f.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\handa\Desktop\oF_root\libs\openFrameworks\math\ofVec2f.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\handa\Desktop\oF_root\libs\openFrameworks\math\ofMatrix4x4.h(326,1): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\handa\Desktop\oF_root\libs\openFrameworks\math\ofMatrix4x4.h(331,1): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\handa\Desktop\oF_root\libs\openFrameworks\math\ofMatrix4x4.h(912,12): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\handa\Desktop\oF_root\libs\openFrameworks\math\ofMatrix4x4.h(913,12): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\handa\Desktop\oF_root\libs\openFrameworks\math\ofMatrix4x4.h(914,12): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\handa\Desktop\oF_root\libs\openFrameworks\math\ofMatrix4x4.h(915,12): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\handa\Desktop\oF_root\apps\myApps\maze\src\ofApp.h(35,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'Dot' 왼쪽은 무시됩니다.
+C:\Users\handa\Desktop\oF_root\apps\myApps\maze\src\ofApp.cpp(53,8): warning C4996: 'ofTrueTypeFont::loadFont': Use load instead
+C:\Users\handa\Desktop\oF_root\apps\myApps\maze\src\ofApp.cpp(135,9): warning C4101: 'pos' :참조되지 않은 지역 변수입니다.
+C:\Users\handa\Desktop\oF_root\apps\myApps\maze\src\ofApp.cpp(297,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\handa\Desktop\oF_root\apps\myApps\maze\src\ofApp.cpp(453,10): warning C4477: 'printf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'std::string'입니다.
+C:\Users\handa\Desktop\oF_root\apps\myApps\maze\src\ofApp.cpp(481,26): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\handa\Desktop\oF_root\apps\myApps\maze\src\ofApp.cpp(586): warning C4715: 'ofApp::readFile': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  maze.vcxproj -> C:\Users\handa\Desktop\oF_root\apps\myApps\maze\bin\maze_debug.exe
+  
+  	                   2	C:\Users\handa\Desktop\oF_root\libs\fmod\lib\vs\x64\
+  	  *추가 파일  		 6942208	C:\Users\handa\Desktop\oF_root\apps\myApps\maze\bin\FreeImage.dll
+  
+  	                   1	C:\Users\handa\Desktop\oF_root\libs\FreeImage\lib\vs\x64\
+  	  *추가 파일  		 1826304	C:\Users\handa\Desktop\oF_root\apps\myApps\maze\bin\fmod.dll
+  	  *추가 파일  		 2041856	C:\Users\handa\Desktop\oF_root\apps\myApps\maze\bin\fmodL.dll

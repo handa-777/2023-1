@@ -1,0 +1,19 @@
+delete from customer;
+delete from package;
+delete from pack_order;
+delete from receive;
+delete from recipient;
+delete from vehicle;
+delete from warehouse;
+delete from shipment;
+delete from delivery;
+
+drop table pack_order;
+drop table receive;
+drop table customer;
+drop table shipment;
+drop table delivery;
+drop table package;
+drop table recipient;
+drop table vehicle;
+drop table warehouse;

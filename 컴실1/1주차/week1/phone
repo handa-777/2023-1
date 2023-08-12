@@ -1,0 +1,17 @@
+if [ $# -eq 0 ]
+then
+	echo "Usage: phone searchfor[...searchfor]
+	(You didn't tell me what you want to search for.)"
+else
+	args=""
+	for arg in $@
+	do
+		args+="${arg}|"
+	done
+	args=${args::-1}
+	echo $args
+	egrep $args mydata > tmp
+	awk -f display tmp
+fi
+
+
