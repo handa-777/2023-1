@@ -13,8 +13,6 @@ const char* host = "localhost";
 const char* user = "root";
 const char* pw = "mysql";
 const char* db = "project";
-//const char* pw = "hdhO43475!";
-//const char* db = "project2";
 
 void query1();
 void query2();
@@ -60,7 +58,7 @@ int main(void) {
 		string line;
 		char line_char[500];
 
-		//ÇÑÁÙ¾¿ ÀĞ¾î¼­ sql¿¡ ÀúÀå
+		//í•œì¤„ì”© ì½ì–´ì„œ sqlì— ì €ì¥
 		while (!fp.eof()) {
 			getline(fp, line);
 			strcpy(line_char, line.c_str());
@@ -110,7 +108,7 @@ int main(void) {
 		string line2;
 		char line_2[500];
 
-		//ÇÑÁÙ¾¿ ÀĞ¾î¼­ sql¿¡ ÀúÀå
+		//í•œì¤„ì”© ì½ì–´ì„œ sqlì— ì €ì¥
 		while (!fp2.eof()) {
 			getline(fp2, line2);
 			strcpy(line_2, line2.c_str());
@@ -147,19 +145,19 @@ void query1() {
 			query += ve_id;
 			query += "'";
 			char chquery[500];
-			strcpy(chquery, query.c_str()); //stringÀ» char[]·Î
+			strcpy(chquery, query.c_str()); //stringì„ char[]ë¡œ
 			cout << endl;
 
 			//cout << chquery << endl;
 			state = mysql_query(connection, chquery);
 			if (state == 0)
 			{
-				sql_result = mysql_store_result(connection); //°á°ú ¸ğµÎ sql_result¿¡ ÀúÀå
-				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_result¸¦ ÇÑÁÙ¾¿ sql_row¿¡ ÀúÀå
+				sql_result = mysql_store_result(connection); //ê²°ê³¼ ëª¨ë‘ sql_resultì— ì €ì¥
+				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_resultë¥¼ í•œì¤„ì”© sql_rowì— ì €ì¥
 				{
-					printf("ID: %s,  name: %s\n", sql_row[0], sql_row[1]); //ÇÑÁÙ¾¿ print
+					printf("ID: %s,  name: %s\n", sql_row[0], sql_row[1]); //í•œì¤„ì”© print
 				}
-				mysql_free_result(sql_result); //°á°ú free
+				mysql_free_result(sql_result); //ê²°ê³¼ free
 			}
 			else {
 				printf("err\n");
@@ -183,12 +181,12 @@ void query1() {
 			state = mysql_query(connection, chquery);
 			if (state == 0)
 			{
-				sql_result = mysql_store_result(connection); //°á°ú ¸ğµÎ sql_result¿¡ ÀúÀå
-				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_result¸¦ ÇÑÁÙ¾¿ sql_row¿¡ ÀúÀå
+				sql_result = mysql_store_result(connection); //ê²°ê³¼ ëª¨ë‘ sql_resultì— ì €ì¥
+				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_resultë¥¼ í•œì¤„ì”© sql_rowì— ì €ì¥
 				{
-					printf("ID: %s,  name: %s\n", sql_row[0], sql_row[1]); //ÇÑÁÙ¾¿ print
+					printf("ID: %s,  name: %s\n", sql_row[0], sql_row[1]); //í•œì¤„ì”© print
 				}
-				mysql_free_result(sql_result); //°á°ú free
+				mysql_free_result(sql_result); //ê²°ê³¼ free
 			}
 			else {
 				printf("err\n");
@@ -212,14 +210,14 @@ void query1() {
 			state = mysql_query(connection, chquery);
 			if (state == 0)
 			{
-				sql_result = mysql_store_result(connection); //°á°ú ¸ğµÎ sql_result¿¡ ÀúÀå
+				sql_result = mysql_store_result(connection); //ê²°ê³¼ ëª¨ë‘ sql_resultì— ì €ì¥
 
-				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_result¸¦ ÇÑÁÙ¾¿ sql_row¿¡ ÀúÀå
+				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_resultë¥¼ í•œì¤„ì”© sql_rowì— ì €ì¥
 				{
-					printf("departure: %s,  destination: %s\ntime of departure: %s,  time of arrive: %s\n", sql_row[0], sql_row[1], sql_row[2], sql_row[3]); //ÇÑÁÙ¾¿ print
-					break; //Ã¹¹øÂ° ÁÙ¸¸ print
+					printf("departure: %s,  destination: %s\ntime of departure: %s,  time of arrive: %s\n", sql_row[0], sql_row[1], sql_row[2], sql_row[3]); //í•œì¤„ì”© print
+					break; //ì²«ë²ˆì§¸ ì¤„ë§Œ print
 				}
-				mysql_free_result(sql_result); //°á°ú free
+				mysql_free_result(sql_result); //ê²°ê³¼ free
 			}
 			else {
 				printf("err\n");
@@ -253,13 +251,13 @@ void query2() {
 	state = mysql_query(connection, chquery);
 	if (state == 0)
 	{
-		sql_result = mysql_store_result(connection); //°á°ú ¸ğµÎ sql_result¿¡ ÀúÀå
-		while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_result¸¦ ÇÑÁÙ¾¿ sql_row¿¡ ÀúÀå
+		sql_result = mysql_store_result(connection); //ê²°ê³¼ ëª¨ë‘ sql_resultì— ì €ì¥
+		while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_resultë¥¼ í•œì¤„ì”© sql_rowì— ì €ì¥
 		{
-			printf("ID: %s,  name: %s\n\n", sql_row[0], sql_row[1]); //ÇÑÁÙ¾¿ print
-			break; //Ã¹¹øÂ° ÁÙ¸¸ print
+			printf("ID: %s,  name: %s\n\n", sql_row[0], sql_row[1]); //í•œì¤„ì”© print
+			break; //ì²«ë²ˆì§¸ ì¤„ë§Œ print
 		}
-		mysql_free_result(sql_result); //°á°ú free
+		mysql_free_result(sql_result); //ê²°ê³¼ free
 	}
 	else {
 		printf("err\n");
@@ -284,13 +282,13 @@ void query3() {
 	state = mysql_query(connection, chquery);
 	if (state == 0)
 	{
-		sql_result = mysql_store_result(connection); //°á°ú ¸ğµÎ sql_result¿¡ ÀúÀå
-		while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_result¸¦ ÇÑÁÙ¾¿ sql_row¿¡ ÀúÀå
+		sql_result = mysql_store_result(connection); //ê²°ê³¼ ëª¨ë‘ sql_resultì— ì €ì¥
+		while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_resultë¥¼ í•œì¤„ì”© sql_rowì— ì €ì¥
 		{
-			printf("ID: %s,  name: %s\n\n", sql_row[0], sql_row[1]); //ÇÑÁÙ¾¿ print
+			printf("ID: %s,  name: %s\n\n", sql_row[0], sql_row[1]); //í•œì¤„ì”© print
 			break;
 		}
-		mysql_free_result(sql_result); //°á°ú free
+		mysql_free_result(sql_result); //ê²°ê³¼ free
 	}
 	else {
 		printf("err\n");
@@ -310,12 +308,12 @@ void query4() {
 	state = mysql_query(connection, chquery);
 	if (state == 0)
 	{
-		sql_result = mysql_store_result(connection); //°á°ú ¸ğµÎ sql_result¿¡ ÀúÀå
-		while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_result¸¦ ÇÑÁÙ¾¿ sql_row¿¡ ÀúÀå
+		sql_result = mysql_store_result(connection); //ê²°ê³¼ ëª¨ë‘ sql_resultì— ì €ì¥
+		while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_resultë¥¼ í•œì¤„ì”© sql_rowì— ì €ì¥
 		{
-			printf("Package ID: %s\n", sql_row[0]); //ÇÑÁÙ¾¿ print
+			printf("Package ID: %s\n", sql_row[0]); //í•œì¤„ì”© print
 		}
-		mysql_free_result(sql_result); //°á°ú free
+		mysql_free_result(sql_result); //ê²°ê³¼ free
 	}
 	else {
 		printf("err\n");
@@ -364,13 +362,13 @@ void query5() {
 			state = mysql_query(connection, chquery);
 			if (state == 0)
 			{
-				sql_result = mysql_store_result(connection); //°á°ú ¸ğµÎ sql_result¿¡ ÀúÀå
-				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_result¸¦ ÇÑÁÙ¾¿ sql_row¿¡ ÀúÀå
+				sql_result = mysql_store_result(connection); //ê²°ê³¼ ëª¨ë‘ sql_resultì— ì €ì¥
+				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_resultë¥¼ í•œì¤„ì”© sql_rowì— ì €ì¥
 				{
-					printf("name: %s,  address: (%s),  owed: $%s\n", sql_row[0], sql_row[1], sql_row[2]); //ÇÑÁÙ¾¿ print
+					printf("name: %s,  address: (%s),  owed: $%s\n", sql_row[0], sql_row[1], sql_row[2]); //í•œì¤„ì”© print
 					break;
 				}
-				mysql_free_result(sql_result); //°á°ú free
+				mysql_free_result(sql_result); //ê²°ê³¼ free
 			}
 			else {
 				printf("err\n");
@@ -392,12 +390,12 @@ void query5() {
 			state = mysql_query(connection, chquery);
 			if (state == 0)
 			{
-				sql_result = mysql_store_result(connection); //°á°ú ¸ğµÎ sql_result¿¡ ÀúÀå
-				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_result¸¦ ÇÑÁÙ¾¿ sql_row¿¡ ÀúÀå
+				sql_result = mysql_store_result(connection); //ê²°ê³¼ ëª¨ë‘ sql_resultì— ì €ì¥
+				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_resultë¥¼ í•œì¤„ì”© sql_rowì— ì €ì¥
 				{
-					printf("service type: %s,  charges: $%s\n", sql_row[0], sql_row[1]); //ÇÑÁÙ¾¿ print
+					printf("service type: %s,  charges: $%s\n", sql_row[0], sql_row[1]); //í•œì¤„ì”© print
 				}
-				mysql_free_result(sql_result); //°á°ú free
+				mysql_free_result(sql_result); //ê²°ê³¼ free
 			}
 			else {
 				printf("err\n");
@@ -419,12 +417,12 @@ void query5() {
 			state = mysql_query(connection, chquery);
 			if (state == 0)
 			{
-				sql_result = mysql_store_result(connection); //°á°ú ¸ğµÎ sql_result¿¡ ÀúÀå
-				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_result¸¦ ÇÑÁÙ¾¿ sql_row¿¡ ÀúÀå
+				sql_result = mysql_store_result(connection); //ê²°ê³¼ ëª¨ë‘ sql_resultì— ì €ì¥
+				while ((sql_row = mysql_fetch_row(sql_result)) != NULL) //sql_resultë¥¼ í•œì¤„ì”© sql_rowì— ì €ì¥
 				{
-					printf("Item: %s,  charges: $%s\n", sql_row[0], sql_row[1]); //ÇÑÁÙ¾¿ print
+					printf("Item: %s,  charges: $%s\n", sql_row[0], sql_row[1]); //í•œì¤„ì”© print
 				}
-				mysql_free_result(sql_result); //°á°ú free
+				mysql_free_result(sql_result); //ê²°ê³¼ free
 			}
 			else {
 				printf("err\n");
